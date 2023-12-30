@@ -26,7 +26,7 @@ const VideoInfoContainer = ({ data }) => {
   };
 
   return (
-    <div className="border border-black w-[50%] my-4">
+    <div className="border border-black md:w-[60%] w-[100%] my-4">
       <div>
         <p></p>
       </div>

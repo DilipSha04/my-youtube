@@ -10,7 +10,7 @@ function Sidebar() {
 
   return (
     <div className="relative">
-      <div className="h-full px-8 py-4 space-y-4 w-2/12 border-r fixed top-20 left-0 bg-white">
+      <div className="h-full px-8 py-4 space-y-4 md:w-2/12 w-5/12 border-r fixed top-20 left-0 bg-white">
       <div>
         <h3 className="font-semibold"><Link to="/" >Home</Link></h3>
         <h3 className="font-semibold">Shorts</h3>

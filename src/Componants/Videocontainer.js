@@ -19,7 +19,7 @@ function Videocontainer() {
   };
 
   return (
-    <div className="py-2 px-8 mt-[3rem]  grid grid-cols-3">
+    <div className="py-2 md:px-8 px-4 mt-[3rem]  grid md:grid-cols-3 grid-cols-1">
       {videos.map((video) => (
         <Link key={video.id} to={"/watch?v=" + video.id}>
           <VideoCard info={video} />

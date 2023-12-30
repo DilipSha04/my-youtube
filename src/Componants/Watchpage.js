@@ -15,12 +15,12 @@ const Watchpage = () => {
   }, []);
 
   return (
-    <div className="flex w-full mx-4">
-      <div className="mt-24 w-[70%] ml-20 flex flex-col">
+    <div className="flex flex-col md:flex-row justify-center  w-full mx-4">
+      <div className="mt-24 md:w-[60%] w-[100%] md:ml-20 ml-0 flex flex-col">
         <iframe
           className="rounded-xl w-[100%]"
-          width="700"
-          height="400"
+          width="600"
+          height="420"
           src={"https://www.youtube.com/embed/" + searchParams.get("v")}
           title="YouTube video player"
           frameBorder="0"
@@ -29,7 +29,7 @@ const Watchpage = () => {
         <VideoInfoContainer />
         <CommentContainer />
       </div>
-      <div className="mt-[6rem] mr-4">
+      <div className="md:mt-[6rem] md:w-[30%] w-[100%] mt-2 mr-4">
         <LiveChat />
       </div>
     </div>

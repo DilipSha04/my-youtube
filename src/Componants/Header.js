@@ -33,7 +33,6 @@ function Header() {
   const getSearchSuggesation = async () => {
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await data.json();
-    console.log(json[1]);
     setSuggestion(json[1]);
 
     //update cache
@@ -51,7 +50,7 @@ function Header() {
   return (
     <div className="z-50">
       <div className="flex justify-between items-center shadow-l border-b fixed top-0 w-full bg-white">
-        <div className="py-2 px-4 flex items-center">
+        <div className="py-2 md:px-4 px-2 flex items-center">
           <img
             onClick={() => toggleMenuHandler()}
             className="h-[3rem]"
@@ -64,10 +63,10 @@ function Header() {
             alt=""
           />
         </div>
-        <div className=" w-[60%] items-center">
+        <div className="w-[60%] ml-10 items-center">
           <div className="flex w-[100%]">
             <input
-              className="px-4 w-[50%] py-1 rounded-l-full text-[16px] border border-gray-400 outline-1 outline-blue-500"
+              className="md:px-4 px-2 md:w-[50%] w-[70%] md:py-1 py-0 rounded-l-full md:text-[16px] text-[12px] border border-gray-400 outline-1 outline-blue-500"
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -76,7 +75,7 @@ function Header() {
             />
             <button className="bg-gray-300 rounded-r-full px-2 py-[4px]">
               <img
-                className="h-[1.6rem]"
+                className="md:h-[1.6rem] h-[18px]"
                 src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png"
                 alt=""
               />
@@ -99,12 +98,12 @@ function Header() {
         </div>
         <div className="flex items-center">
           <img
-            className="h-[3rem]"
+            className="h-[3rem] md:inline-block hidden"
             src="https://static.thenounproject.com/png/381172-200.png"
             alt=""
           />
           <img
-            className="h-[3rem]"
+            className="h-[3rem] md:inline-block hidden"
             src="https://static.thenounproject.com/png/326193-200.png"
             alt=""
           />

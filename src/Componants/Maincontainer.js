@@ -6,7 +6,7 @@ import Buttonlist from './Buttonlist';
 
 function Maincontainer() {
   return (
-    <div className="absolute top-20 -z-10">
+    <div className="absolute md:top-20 top-10 -z-10">
       <Buttonlist />
       <Videocontainer />
     </div>
